@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="output"></div>
+    <script>
+        // let caneta = new Object();
+        // caneta.nome = 'caneta';
+        // caneta.preco = 2; 
+
+        // let lapis = new Object();
+        // lapis.nome = 'lapis';
+        // lapis.preco = 3;
+
+        let produto1 = new Object();
+        produto1.nome = 'caderno azul';
+        produto1.estoque = 10;
+        produto1.preco = 50;
+
+        //criando um metodo
+        //this
+        produto1.comprar = function(qtd){
+            if(!qtd){
+                qtd = 1;
+            }
+            console.log('Comprou caneta');
+            this.estoque = this.estoque - qtd;
+            console.log(this.estoque);
+        }
+
+        var msg = '';
+
+        msg+='nome: ' + produto1.nome + '<br>'
+        msg+='preço: ' + produto1.preco + '<br>'
+        msg+='estoque: ' + produto1.estoque + '<br>'
+
+        document.querySelector('#output').innerHTML=msg;
+
+
+        
+
+
+
+    </script>
+</body>
+</html>

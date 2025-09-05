@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    alert("Jogador 1");
+    let j1 = prompt("Digite um numero: ");
+
+    alert("Jogador 2");
+    let j2 = prompt("Digite um numero: ");
+
+    let nSort= parseInt(Math.random()*2);
+
+    let maior;
+    let menor;
+
+    if(j1===j2){
+        alert("empate");
+    }else if(j1>j2){
+        maior = j1;
+        menor = j2
+    }else{
+        maior = j2;
+        menor = j1
+    }
+
+    if(nSort === 0){
+        alert("Numero ganhador: " + menor);
+    }else{
+        alert("Numero ganhador: " + maior);
+    }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!-- 
+not = !
+and = &&
+or = ||
+ -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>OPERADORES LÓGICOS</h1>
+    <script>
+
+        let x = parseFloat(prompt("Digite um numero: "));
+        let y = parseFloat(prompt("Digite um numero: "));
+        let media = (x+y) / 2 ;
+        if(media>5 && x>0 && y>0){
+            alert("Aprovado");
+        }else{
+            alert("reprovado")
+        }
+
+
+        //Usando or 
+        // if(x===0 || y === 0 || media<=5){
+        //     alert("Reprovado");
+        // }else{
+        //     alert("Aprovado");
+        // }
+    </script>
+</body>
+</html>

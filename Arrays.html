@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>ARRAYS</h1>
+    <div id="output"></div>
+    <script>
+    // let pessoas = new Array();
+    // pessoas[0] = 'joao';
+    // pessoas[1] = 'maria';
+    // pessoas[2] = 'jose';
+
+    // var produtos = new Array();
+    // produtos.push('canetas');
+    // produtos.push('borrachas', 'lapis', 'folhas');
+
+    // var nomes =new Array('maria', 'jose', 'joao', 2, true, false, function{
+
+    // });
+
+
+    var produtos = new Array('caneta', 'lapis', 'tesoura', 'borracha', 'caderno', 'livro');
+    produtos.push('compasso', 'cartolina');
+
+    var output = document.querySelector('#output');
+    // output.innerHTML = produtos.toString();
+
+    var msg = '';
+    for(let i = 0; i<produtos.length; i++){
+        msg += 'produto ' + (i+1) +' = '+ produtos[i] + '<br>'; 
+    }
+    output.innerHTML = msg;
+
+
+
+
+</script>
+</body>
+</html>
+
+
+
+
+

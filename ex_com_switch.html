@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora simples</title>
+</head>
+<body>
+    <h1>CALCULADORA SIMPLES</h1>
+    <br>
+    <h2>OPÇÕES:</h2>
+    <button onclick="iniciarCalculo('+')">+</button>
+    <button onclick="iniciarCalculo('-')">-</button>
+    <button onclick="iniciarCalculo('*')">*</button>
+    <button onclick="iniciarCalculo('/')">/</button>
+
+    <div id="output"></div>
+
+    <script>
+
+        let n = prompt("Digite um numero para iniciar: ");
+        n = parseFloat(n);
+        escreve(n); 
+
+
+        function escreve(mensagem){
+            let output = document.querySelector('#output');
+            output.innerHTML = mensagem; 
+        }
+
+
+        function iniciarCalculo(simbolo){
+            let msg; 
+            let n1 = document.querySelector("#output").textContent; //vai receber o texto
+            n1 = parseFloat(n1); 
+
+            let n2 = prompt("Digite um numero: ");
+            n2 = parseFloat(n2);
+
+            try{
+                msg = calcular(simbolo, n1,n2);
+            }catch(e){
+                alert(e);
+                return;
+            }
+            escreve(msg);
+        }
+
+        function calcular(opc, n1, n2){
+            if(isNaN(n1) || isNaN(n2))
+            {
+                throw new Error('valor invalido'); //erro direto no console
+            }
+            let numCalculado = null;
+            switch(opc){
+                case '+':
+                    numCalculado = n1 + n2;
+                    break;
+                case '-':
+                    numCalculado = n1 - n2;
+                    break;
+                case '*': 
+                    numCalculado = n1 * n2;
+                    break;
+                case '/':
+                    numCalculado = n1 / n2;
+            }
+
+            return numCalculado;
+        }
+
+
+
+
+
+
+    </script>
+</body>
+</html>

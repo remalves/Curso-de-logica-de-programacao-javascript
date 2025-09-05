@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Problema</title>
+</head>
+<body>
+    <h1>PROBLEMA</h1>
+    <button onclick="entradaDadosBotao()">AREA TOTAL<br>DO RETANGULO</button>
+    <div id="output"></div>
+    <script>
+
+        function entradaDadosBotao(){
+            let l1 = prompt("Digite o valor de um lado: ");
+            l1 = parseFloat(l1);
+
+            let l2 = prompt("Digite o valor do outro lado: ");
+            l2 = parseFloat(l2);
+            let b=2;
+            saida(l1,l2,b);
+
+        }
+
+        function entradaDadosAlert(){
+            let l1 = prompt("Digite o valor de um lado: ");
+            l1 = parseFloat(l1);
+
+            let l2 = prompt("Digite o valor do outro lado: ");
+            l2 = parseFloat(l2);
+            let a=1; 
+            saida(l1,l2,a);
+        }
+
+        function saida(l1,l2,parametro){
+            let res;
+
+            try{
+                res  = calculoArea(l1,l2);
+            } catch(e){
+                alert(e);
+                return;
+            }
+
+            if(parametro === 1){
+                mostrarNaTelaAlert(res);
+            }else{
+                mostrarNaTelaBotao(res);
+            }
+                
+        }
+
+        function calculoArea(l1,l2){
+
+            if(l1 === undefined || l2 === undefined){
+                throw new Error('valor invalido');
+            }
+            if(isNaN(l1) || isNaN(l2) ){
+                throw new Error('Apenas numeros');
+            }
+
+            return l1*l2;
+        }
+
+
+        function mostrarNaTelaBotao(res){
+            document.querySelector('#output').innerHTML = 'a area total é = ' + res;
+
+            
+        }
+
+        function mostrarNaTelaAlert(res){
+            alert("A area total é = " + res);
+        }
+
+        entradaDadosAlert();
+
+
+    </script>
+</body>
+</html>

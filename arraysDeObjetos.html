@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="output"></div>
+    <script>
+
+
+        //array 
+        var nomes = ['maria', 'jose'];
+        //objeto
+        var prod = {'nome': 'caneta', 'preco': 2};
+
+        var produtos = [prod, {'nome': 'lapis', 'preco': 2}]
+        //produtos[0] = {'nome': 'caneta', 'preco': 2}
+        //produtos[0].nome = 'caneta'
+        //produtos[0].preco = 2
+
+        var lista = [
+            {'nome': 'caneta', 'preco': 2}, 
+            {'nome': 'lapis', 'preco': 3},
+            {'nome': 'borracha', 'preco': 1}
+        ];
+
+
+        var msg = '';
+        for(var i = 0; i< lista.length; i++){
+            //console.log(lista[i]);
+            //console.log(lista[i].preco);
+            //console.log(lista[i].nome);
+
+            msg+='<h2> Produto: ' + lista[i].nome + ' | ' + ' Preço: R$' + lista[i].preco + '</h2>' + '<br>';
+
+        }
+        document.querySelector('#output').innerHTML = msg;
+
+    </script>
+</body>
+</html>

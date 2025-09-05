@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Logica de programação</h1>
+
+    <div id="output"></div>
+    <button onclick="mostrarTabuada()">Criar tabuada</button>
+    <button onclick="limparTabuada()">Limpar Tabuada</button>
+
+    <script>
+        let output = document.querySelector('#output');
+        let mensagem = '';
+        
+        function mostrarTabuada(){
+            //alert('mostrarTabuada chamada');
+            let n = prompt("digite um numero: ");
+            n = parseFloat(n);
+            limparTabuada();
+            let i = 1;
+
+            while(i<=1000){
+                mensagem += n +'x'+i + '=' + (n*i) + '<br>';
+                i++;
+            }
+
+            output.innerHTML = mensagem;
+
+        }
+
+
+        function limparTabuada(){
+            mensagem = '';
+            output.innerHTML = mensagem;
+        }
+
+        mostrarTabuada();
+        limparTabuada();
+
+
+        
+
+
+        //console.log(output);
+        //output.innerHTML="texto inserido por js";
+
+        
+
+        // for(let i = 0; i < 100; i++){
+        //     mensagem+='i:'+ i + '<br>';
+        // }
+        // output.innerHTML = mensagem;
+
+
+
+        
+
+
+
+    </script>
+</body>
+</html>

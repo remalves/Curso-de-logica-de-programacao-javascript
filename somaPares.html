@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let numeros = new Array(0,1,2,3,4,5,6);
+        let somaDosPares = somaPares(numeros);
+        alert('A soma dos pares: ' + somaDosPares);
+
+        function somaPares(array){
+            let soma = 0;
+
+            for(let i=0; i <array.length; i++){
+                //se puder ser convertido em numero e modulo de arr[i] % 2 == 0
+                if(!isNaN(array[i]) && array[i] % 2 == 0){
+                    soma+=array[i];
+                }
+            }
+
+            return soma;
+        }
+
+    </script>
+
+</body>
